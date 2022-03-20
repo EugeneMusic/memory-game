@@ -23,11 +23,26 @@
     height: 10%;
     background-color: var(--cards-color);
 }
-.main {
+.header-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 100px;
+    width: 50%;
     margin: 0 auto;
+    height: 100%;
+}
+.button {
+    width: 100px;
+    height: 50%;
+    background-color: var(--card-color);
+}
+.main {
     flex-grow: 1;
-    max-width: 1440px;
+    width: 100%;
     min-width: 320px;
+    display: flex;
+    justify-content: center;
 }
 .footer {
     height: 10%;
@@ -43,8 +58,9 @@
     display: flex;
     flex-wrap: wrap;
     height: 100%;
-    width: 100%;
+    width: 50%;
     perspective: 1000px;
+    justify-content:end;
 }
 .memory-card {
     position: relative;
@@ -54,7 +70,8 @@
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform .5s;
-    box-shadow: 10px;
+    box-shadow: 2px 2px 10px red;
+    border-radius: 10px;
 }
 .memory-card:active {
     transform: scale(0.97);
@@ -70,13 +87,12 @@
     background-color: var(--cards-color);
     backface-visibility: hidden;
     border-radius: 10px;
+    padding: 5%;
 }
 .front-face {
     transform: rotateY(180deg);
   }
-.back-face {
-    padding: 5% 0;
-}
+
 .gh-link {
     color: var(--first-color);
     text-decoration: none;
